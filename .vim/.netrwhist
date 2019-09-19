@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/cto-home/dg5463/depth/monodepth2/outputs/oa_clean_2/registered_depth'
+let g:netrw_dirhist_2='/home/dsgonza2/monodepth2/splits/eigen_full'
+let g:netrw_dirhist_3='/home/dsgonza2/monodepth2/.git'
+let g:netrw_dirhist_4='/home/dsgonza2/.ssh'
