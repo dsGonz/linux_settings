@@ -1,5 +1,5 @@
 " ============================================================================
-" Vim-plug initialization
+" | VIM-PLUG INITIALIZATION | "
 " Avoid modify this section, unless you are very sure of what you are doing
 
 let vim_plug_just_installed = 0
@@ -20,15 +20,26 @@ endif
 " Obscure hacks done, you can now modify the rest of the .vimrc as you wish :)
 
 " ============================================================================
-" Active plugins
+" | ACTIVE PLUGINS | "
 " You can disable or add new ones here:
 
 " this needs to be here, so vim-plug knows we are declaring the plugins we
 " want to use
 call plug#begin('~/.vim/plugged')
 
+
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
+
+" QML syntax highlighting
+Plug 'peterhoeg/vim-qml'
+
+" Airline Theme for vim status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" NERDTree: File explorer
+Plug 'scrooloose/nerdtree'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -37,35 +48,31 @@ call plug#end()
 " Install plugins the first time vim runs
 if vim_plug_just_installed
     echo "Installing Bundles, please ignore key map error messages"
+    :source %
     :PlugInstall
 endif
 
-                        
-" ============================================================================
-" Color setting
-syntax enable
-set t_Co=256   " This is may or may not needed.
 
+" ============================================================================
+" | COLOR SETTINGS | "
+syntax enable
+syntax on
+set t_Co=256   " This is may or may not be needed.
+
+" Saved colorschemes
 "colorscheme molokai
 "colorscheme vim-monokai-tasty
-colorscheme wallaby
+"colorscheme wallaby
 "colorscheme tropikos
 "colorscheme lizard256
 "colorscheme mopkai
+let g:gruvbox_contrast_dark="hard"
+colorscheme gruvbox
 "colorscheme flattr
 "colorscheme PaperColor 
 "colorscheme onedark
 
-" Set background to transparent
-hi Normal guibg=NONE ctermbg=NONE
-
 "set background=dark
-if has("gui_running")
-    let g:molokai_original = 1
-else
-    let g:rehash256 = 1
-endif
-
 
 " ============================================================================
 " Spaces and tabs
@@ -122,14 +129,17 @@ set foldmethod=indent
 
 
 " ============================================================================
-" Task list
-nmap <F2> :TaskList<CR>
+" Airline settings
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline#extensions#tabline#enabled = 1
 
+" ============================================================================
+" NERDTree settings
+map <C-n> :NERDTreeToggle<CR>
 
 " ============================================================================
 " Buffer shortcut
-" Show interactive buffer list (need CtrlP)
-nmap <F5> <C-p><C-f>
 " Prev buffer
 nmap <F6> :bp<CR>
 " Next buffer
