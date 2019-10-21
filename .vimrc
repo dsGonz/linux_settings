@@ -31,8 +31,9 @@ call plug#begin('~/.vim/plugged')
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
 
-" QML syntax highlighting
-Plug 'peterhoeg/vim-qml'
+" Syntax highlighting plugins
+Plug 'peterhoeg/vim-qml' " .qml files
+Plug 'tmux-plugins/vim-tmux' " tmux.conf
 
 " Airline Theme for vim status bar
 Plug 'vim-airline/vim-airline'
