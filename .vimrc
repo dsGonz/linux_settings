@@ -41,6 +41,9 @@ Plug 'vim-airline/vim-airline-themes'
 " NERDTree: File explorer
 Plug 'scrooloose/nerdtree'
 
+" gruvbox: Retro Groove colorscheme with airline support
+Plug 'morhetz/gruvbox'
+
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
 
@@ -51,7 +54,6 @@ if vim_plug_just_installed
     :source %
     :PlugInstall
 endif
-
 
 " ============================================================================
 " | COLOR SETTINGS | "
@@ -83,7 +85,6 @@ set shiftwidth=4
 set smarttab
 set autoindent
 
-
 " ============================================================================
 " Buffer settings
 set hidden
@@ -91,7 +92,6 @@ set hidden
 if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   endif
-
 
 " ============================================================================
 " UI config
@@ -119,14 +119,12 @@ set hlsearch            " highlight matches
 " turn off search highlight (by pressing <SPACE> in command mode)
 nnoremap <leader><space> :nohlsearch<CR>
 
-
 " ============================================================================
 " Code folding
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent
-
 
 " ============================================================================
 " Airline settings
@@ -145,17 +143,6 @@ nmap <F6> :bp<CR>
 " Next buffer
 nmap <F7> :bn<CR>
 
-" ============================================================================
-" Tag bar
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-" ============================================================================
-" TabMan
-" mappings to toggle display, and to focus on it
-let g:tabman_toggle = 'tl'
-let g:tabman_focus  = 'tf'
-
 " Signify ====================================================================
 " this first setting decides in which order try to guess your current vcs
 " UPDATE it to reflect your preferences, it will speed up opening files
@@ -171,7 +158,6 @@ highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
 highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
-
 
 " =============================================================================
 " CtrlP
