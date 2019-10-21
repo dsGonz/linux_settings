@@ -66,13 +66,13 @@ set t_Co=256   " This is may or may not be needed.
 "colorscheme tropikos
 "colorscheme lizard256
 "colorscheme mopkai
-let g:gruvbox_contrast_dark="hard"
-colorscheme gruvbox
 "colorscheme flattr
 "colorscheme PaperColor 
 "colorscheme onedark
+let g:gruvbox_contrast_dark="hard"
+colorscheme gruvbox
 
-"set background=dark
+set background=dark
 
 " ============================================================================
 " Spaces and tabs
