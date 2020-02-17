@@ -136,6 +136,7 @@ let g:airline#extensions#tabline#enabled = 1
 " ============================================================================
 " NERDTree settings
 map <C-n> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 
 " ============================================================================
 " Buffer shortcut
